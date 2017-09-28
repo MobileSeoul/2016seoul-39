@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    android:id="@+id/toplayout">
+
+    <FrameLayout
+        android:id="@+id/customViewContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/middlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomlayout"
+        >
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressbar_Horizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:max="100"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:progressDrawable="@drawable/progress_loading" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="1px" android:background="#ff4bac88">
+            </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="#353232"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/btnback"
+                        android:src="@drawable/back"
+                        android:layout_marginTop="6dp"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="뒤로가기"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:layout_below="@+id/btnback"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/btnforward"
+                        android:src="@drawable/forward"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_marginTop="6dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="앞으로"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:layout_below="@+id/btnforward"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/gohome"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/gohome"
+                        android:layout_marginRight="18dp"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="홈으로"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:layout_below="@+id/gohome"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/btnrefresh"
+                        android:src="@drawable/refresh"
+                        android:layout_marginRight="18dp"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="새로고침"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:layout_below="@+id/btnrefresh"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/setting"
+                        android:src="@drawable/login"
+                        android:layout_marginRight="18dp"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="내정보"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:layout_below="@+id/setting"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="6dp"
+                        android:id="@+id/btnlogin"
+                        android:src="@drawable/setting"
+                        android:layout_marginRight="18dp"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="정보수정"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:layout_below="@+id/btnlogin"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
